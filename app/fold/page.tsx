@@ -42,6 +42,7 @@ export default function FoldPage() {
           original_text: content,
           crane_language,
           mood_color,
+          is_public: true,
         }),
       })
 

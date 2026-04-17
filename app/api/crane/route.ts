@@ -23,7 +23,7 @@ export async function POST(request: Request) {
     console.error('crane_language:', body.crane_language)
     console.error('mood_color:', body.mood_color)
 
-    const { original_text, crane_language, mood_color } = body
+    const { original_text, crane_language, mood_color, is_public } = body
 
     if (!original_text || !crane_language || !mood_color) {
       console.error('=== VALIDATION FAILED ===')
@@ -36,6 +36,7 @@ export async function POST(request: Request) {
       original_text,
       crane_text: crane_language,
       color: mood_color,
+      is_public,
     }
 
     console.error('=== DEBUG: INSERT DATA ===')
